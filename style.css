@@ -1,0 +1,739 @@
+/* ----------- Work Sans Font Link ---------  */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* --------- Common CSS start ----------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+}
+
+.text-start {
+    text-align: left;
+}
+
+.text-end {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center; 
+}
+
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.none{
+    float: none;
+}
+
+.container{
+    width: 95%;
+    margin: auto;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+.section-bg{
+    background-color: #f7f9ff;
+}
+/* =============== Section Title Common CSS================ */
+.section-title{
+    padding: 20px 0 70px;
+}
+.section-title h2{
+    font-size: 44px;
+    font-weight: 500;
+    padding: 25px 0;
+}
+.section-title h2.big{
+    font-size: 50px;
+}
+.section-title h5{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #212121;
+}
+.section-title h3{
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 300;
+    color: #767676;
+}
+.section-title h4 {
+    font-size: 25px;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 500;
+    color: #000;
+}
+.section-title p{
+    font-size: 26px;
+    line-height: 40px;
+    font-weight: 300;
+    color: #767676;
+}
+/* =============== Section Title Common CSS================ */
+/* ---------- Main CSS End--------- */
+/* ---------- Header CSS Start--------- */
+header{
+    padding: 10px 0;
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    box-shadow: 2.5px 2.5px 30px 0px rgb(0 0 0 / 10%);
+    z-index: 1;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+}
+.header-logo{
+    width: 30%;
+}
+.header-logo img{
+    width: 45px;
+    float: left;
+    margin-right: 10px;
+}
+.header-logo a{
+    display: block;
+    color: #010101;
+    font-size: 25px;
+    font-weight: 500;
+    transition: .3s;
+    margin-top:10px ;
+    letter-spacing: 1px;
+}
+.header-logo a:hover{
+    color: #ccc;
+}
+nav{
+    width: 55%;
+}
+nav ul{
+    padding: 0; 
+    display: flex;  
+}
+nav ul li{
+    position: relative;
+}
+nav ul li a{
+    display: block;
+    padding: 15px;
+    color: #010101;
+    transition: .3s;
+    letter-spacing: 1px;
+}
+nav ul li a:hover{
+    color: #6278df;
+}
+.header-btn{
+    width: 15%;
+    text-align: end;
+}
+.header-btn a{
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 7px;
+    border: 2px solid #6278df;
+    color: #6278df;
+    font-weight: 700;
+    font-size: 17px;
+    transition: .4s;
+}
+.btn{
+    display: inline-block;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 17px;
+    transition: .4s;
+}
+.header-btn a:hover{
+    background-color: #6278df;
+    color: #fff;
+    box-shadow: 2.5px 2.5px 15px 6px #6279df6a;
+}
+/* ======= Dropdown Start ========  */
+.dropdown{
+    background-color: #fff;
+    transition: .4s;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+.dropdown ul{
+    display: flex;
+    flex-direction: column;
+}
+.dropdown ul li{
+    border-top: 1px solid #ccc;
+}
+.dropdown ul li a{
+    display: block;
+}
+.dropdown ul li:first-child{
+    border-top: none;
+}
+nav ul li:hover .dropdown{
+    opacity: 1;
+    visibility: visible;
+}
+/* ========= header part end============= */
+/* =========== Hero Part Css Start ============ */
+
+.hero{
+    background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url(./img/mbr-10.jpg) no-repeat center;
+    background-size: cover;
+    padding:120px 0;
+}
+.hero-content{
+    text-align: center;
+    color: #fff;
+}
+.hero-content p {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 300;
+    padding: 50px 0;
+}
+.hero-content h2 {
+    font-size: 45px;
+    color: #fff;
+    font-weight: 500;
+    padding: 0 0 40px 0;
+}
+.hero-form{
+    padding: 30px 0 50px;
+}
+.hero-form input{
+    padding: 20px 24px;
+    font-size: 18px;
+    width: 350px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+    font-weight: 500;
+    border: 1px solid #5ba533;
+}
+.hero-form input:focus{
+    box-shadow: 2.5px 2.5px 30px -3px #6279df;
+}
+.hero-form a{
+    background-color: #5ba533;
+    border: 2px solid #5ba533;
+    width: 250px;
+    color: #fff;
+    padding: 18px 20px;
+    border-radius: 5px !important;
+    font-size: 20px;
+}
+.hero-form a:hover{
+    background-color: #fff;
+    color: #6278df;
+    border: 2px solid #6278df;
+    box-shadow: 2.5px 2.5px 15px 6px #6279df6a;
+}
+/* =========== Hero Part Css End ============ */
+/* =========== Counter Section Css Start ============ */
+
+.counter-wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 0;
+}
+.counter-item {
+    text-align: center;
+}
+.counter-item h2{
+    font-size: 60px;
+    font-weight: 500;
+    padding: 10px 0;
+    display: inline-block;
+}
+.counter-item  span{
+    font-size: 60px;
+    font-weight: 500;
+    padding: 10px 0;
+}
+.counter-item h3{
+    color: #767676;
+    font-size: 22px;
+    font-weight: 400;
+}
+/* =========== Counter Section Css End ============ */
+/* =========== Intro Part Section Css Start ============ */
+
+.intro-part{
+    padding: 60px 0;
+}
+.intro-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.intro-text{
+    width: 65%;
+}
+.intro-img{
+    width: 30%;  
+}
+.intro-img img{
+    width: 100%;
+}
+/* =========== Intro Part Section Css End ============ */
+/* =========== App Intro Part Section Css Start ============ */
+
+.app-intro{
+    padding: 60px 0;
+}
+.app-intro-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.app-intro-item{
+    width: 31.5%;
+    display: flex;
+    box-shadow: 2.5px 4.5px 30px 0px rgb(0 0 0 / 15%);
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 0 5px 5px 0;
+}
+.app-intro-img{
+    width: 40%;
+} 
+.app-intro-img img{
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px 0 0 5px;
+} 
+.app-intro-text{
+    padding: 30px 10px 30px 20px;
+    width: 60%;
+}
+.app-intro-text h3{
+    font-size: 22px;
+    font-weight: 500;
+    padding: 10px 0;    
+}
+.app-intro-text p{
+    font-size: 16px;
+    color: #767676;
+    font-weight: 300;
+    line-height: 27px;
+    padding: 10px 0;
+}
+/* =========== App Intro Part Section Css End ============ */
+/* =========== App Intro-2 Part Section Css Start============ */
+
+.app-intro-2{
+    padding: 40px 0;
+}
+.section-title-2{
+    padding: 30px 0 30px;
+}
+.section-title-2 h2{
+    font-size: 44px;
+    font-weight: 400;
+    padding: 0px 0 10px;
+}
+.item-2 img{
+    cursor: pointer;
+}
+.item-2{
+    position: relative;
+    transition: .4s;
+}
+.item-2::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgb(124 134 194 / 70% );
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+    cursor: pointer;
+}
+.item-2:hover::before{
+    opacity: 1;
+    visibility: visible;
+}
+/* =========== App Intro-2 Part Section Css End ============ */
+/* =========== Pricing Table Section Start==========  */
+.pricing-table-wrapper{
+    padding: 20px 0 60px;
+    display: flex;
+    justify-content: center;
+}
+.pricing-table-item{
+    padding: 40px 40px 10px 40px;
+    background-color: #fff;
+    width: 32%;
+    margin: 0 15px;
+    border-radius: 5px;
+    box-shadow: 2.5px 4.33px 30px 0 rgb(64 87 191 / 10%);
+}
+.pricing-table-top{}
+.pricing-table-top h2{
+    font-size: 44.5px;
+    font-weight: 500;
+    padding: 20px 0;
+}
+.pricing-table-top p{
+    font-size: 21px;
+    font-weight:300;
+    color: #767676;
+    line-height: 32px;
+    padding: 20px 0; 
+    word-break: break-word;
+
+}
+.pricing-table-end{
+}
+.pricing-table-end ul{
+    padding: 0;
+}
+.pricing-table-end ul li{
+    padding: 15px 0;
+    font-size: 20px;
+    color: #767676;
+    font-weight: 300;
+}
+.pricing-table-end ul li span{
+    width: 50px;
+    text-align: center;
+    display: inline-block;
+    color: #6279df;
+    font-size: 32px;
+    margin-right: 10px;
+}
+.pricing-table-btn{
+    text-align: center;
+    padding-bottom: 30PX;
+}
+.pricing-table-btn a{
+    display: block;
+    background-color: #fff;
+    color: #6278df;
+    padding: 19px 30px;
+    border-radius: 7px;
+    margin: 30px 0;
+    font-size: 20px;
+    box-shadow: 3.5px 5px 30px 0 rgb(64 87 194 / 20% );
+    transition: .5s;
+}
+.pricing-table-item:hover .pricing-table-btn a{
+    background-color: #6278df;
+    color: #fff;
+}
+.pricing-table-btn a:hover{
+    background-color: #000 !important;
+}
+/* =========== Pricing Table Section End==========  */
+/* =========== User Feedback Section Start==========  */
+
+.user-feedback .section-title span{
+    font-size: 88px;
+    color: #ccc;
+    opacity: .5;
+    padding: 0;
+}
+.user-feedback .section-title p{
+    width: 70%;
+    margin: auto;
+    font-size: 23px;
+}
+.user-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.user-img{
+    width: 100px;
+}
+.user-img img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+.user-info{
+    text-align: left !important;
+    margin-left: 10px;
+}
+.user-info h3{
+    display: block;
+    font-weight:500;
+    font-size: 22px;
+    color: #010101;
+    padding: 0;
+}
+.user-info h4{
+    display: block;
+    margin: 0 ;
+    font-size: 18px ;
+    padding: 0 ;
+    font-weight: 400;
+    text-align: left;
+}
+/* =========== User Feedback Section End==========  */
+/* =========== Our Team History Section End==========  */
+.team-section{
+    padding: 40px 0 80px;
+}
+.team-history-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0  20px 0;
+}
+.team-history-text{
+    width: 48%;
+}
+.team-history-text p{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 31px;
+    color: #000;
+}
+.team-member-info-wrapper{
+    padding: 100px 0 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.single-team-member{
+    background-color: #fff;
+    width: 23.5%;
+    box-shadow: 2.5px 4.5px 30px 0 rgb(64 87 194 / 20% );
+    padding: 70px 20px 20px 20px ;
+    position: relative;
+    border-radius: 5px;
+}
+.single-team-member img{
+    position: absolute;
+    top: -60px;
+    left: 20px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 2.5px 4.5px 30px 0 rgb(64 87 194 / 20% );
+}
+.team-member-bio{
+    padding: 10px 0;
+}
+.team-member-bio h3{
+    font-size: 21px;
+    line-height: 31px;
+}
+.team-member-bio h5{
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 31px;
+}
+.team-member-info{
+    padding-bottom: 20px ;
+}
+.team-member-info p{
+    font-size: 17px;
+    font-weight: 400;
+    color: #767676;
+}
+.team-member-btn{
+    padding: 15px 0 10px;
+}
+.team-member-btn a{
+    display: inline-block;
+    background-color: #fff;
+    color: #465052;
+    padding: 10px 15px;
+    transition: .4s;
+    box-shadow: 2.5px 4.5px 30px 0 rgb(64 87 194 / 20% );
+}
+.team-member-btn a:hover{
+    background-color: #465052;
+    color: #fff;
+}
+/* =========== Our Team History Section End==========  */
+/* =========== Contact Section Start==========  */
+
+.contact{
+    padding: 30px 0 50px;
+}
+.contact-form-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.form-item{
+    width: 55%;
+    padding: 50px;
+    box-shadow: 0 0 30px 0 rgb(64 87 194 / 10% );
+}
+.form-item .section-title{
+    padding: 15px 0;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-email{
+    display: flex;
+}
+.input-email input{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.form input, textarea{
+    font-size: 20px;
+    color: #465052;
+    border: 1px solid #e4e4e4;
+    outline: none;
+    border-radius:8px;
+    padding: 25px;
+    margin: 8px;
+    font-weight: 300;
+    transition: .4s;
+    box-shadow: 2.5px 4.5px 30px 0 rgb(64 87 191 / 10%);
+}
+.input-name-phone{
+    display: flex;
+}
+.input-name-phone input{
+    display: flex;
+    flex-basis: 50%;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+.textarea{
+    display: flex;
+}
+.textarea textarea{
+    width: 100%;
+}
+.contact-btn{
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+.contact-btn button{
+    background-color: #6278df;
+    color: #fff;
+    padding: 20px 30px !important;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 18px;
+    border: 2px solid #6278df;
+    transition: .4s;
+}
+.form input:focus, textarea:focus{
+    border: 1px solid #6278df;
+    box-shadow: 2.5px 2.5px 15px 6px #6279df6a;
+}
+.contact-btn button:hover{
+    background-color: #fff;
+    color: #6278df;
+    box-shadow: 2.5px 2.5px 15px 6px #6279df6a;
+}
+/* =========== Contact Section End==========  */
+/* =========== Get Our App Section End==========  */
+.get-app{
+    padding: 50px 0;
+}
+.get-app-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.get-app-item{
+    width: 55%;
+    padding: 30px;
+}
+.get-app-item .section-title{
+    padding-bottom: 10px;
+}
+.get-app-item .section-title h2{
+    font-weight: 400;
+    line-height: 60px;
+}
+.get-app-btn{
+    display: flex;
+    justify-content: center;
+}
+.get-app-btn .btn{
+    padding: 19px 30px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.get-app-btn .btn1{
+    margin-right: 20px;
+    border: 2px solid #5fa43f;
+    color: #5fa43f;
+}
+.get-app-btn .btn1:hover{
+    background-color: #5fa43f;
+    color: #fff;
+    box-shadow: 3px 3px 27px -3px #5ba533;
+}
+.get-app-btn .btn span{
+    margin-right: 10px;
+}
+.get-app-btn .btn2{
+    background-color: #5fa43f;
+    color: #fff;
+    box-shadow: 3px 3px 27px -3px #5ba533;
+}
+.get-app-btn .btn2:hover{
+    background-color: #000;
+    box-shadow: none;
+}
+.get-app-img{
+    display: flex;
+    justify-content: center;
+}
+.get-app-img img{
+    width: 55%;
+}
+/* =========== Get Our App Section End==========  */
+/* =========== Footer Section Start==========  */
+footer{
+    padding: 40px 0;
+    text-align: center;
+}
+footer p{
+    font-size: 21px;
+}
+footer p a{
+    color: #465052;
+    transition: .4s;
+}
+footer p a:hover{
+    color: #000;
+}
+/* =========== Footer Section End==========  */
